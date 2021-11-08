@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+.demo1 {
+    width: 840px;
+    height: 385px;
+    margin: 20px auto;
+    border: 1px solid rgb(174, 174, 174);
+    box-shadow: 2px 2px rgba(166, 166, 166);
+}
+
+.demo1 h3 {
+    padding: 20px 0 10px 12px;
+}
+
+ul li {
+    width: 118px;
+    height: 120px;
+    margin: 10px;
+    border: 1px solid rgba(222, 222, 222);
+}
+
+ul li p {
+    text-align: center;
+    font-size: 12px;
+    padding: 5px 0;
+}
+
+ul li.img {
+    text-align: center;
+}
+
+ul li:nth-child(5) {
+    margin-right: 100px;
+}
+
+.demo1 ul {
+    display: flex;
+    flex-direction: row;
+    /* 换行 */
+    flex-wrap: wrap;
+    align-content: space-between;
+    margin-left: 20px;
+}
+
+.demo2 {
+    height: 500px;
+    width: 840px;
+    border: 1px solid rgb(174, 174, 174);
+    box-shadow: 2px 2px rgba(166, 166, 166);
+    margin: 20px auto;
+    margin-top: 20px;
+    margin: 0 auto;
+}
+
+.demo2 h1,
+.demo2 h2,
+.demo2 p {
+    padding: 18px 0 0 20px;
+}
+
+.demo2 ol {
+    margin-left: 50px;
+}
+
+.demo2 ol li {
+    margin-top: 15px;
+}
+
+.demo2 ol li:last-child {
+    margin-bottom: 30px;
+}
+
+.table {
+    margin: 10px 0 0 25px;
+}
