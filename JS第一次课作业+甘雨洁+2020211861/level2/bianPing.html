@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组扁平化</title>
+    <script>
+        var arr = [1, [2, 3], 4, [5, [6, [7, 8]]],
+            [9, 10]
+        ];
+
+        function fun1(arr) {
+            var res = [];
+            if (Array.isArray(arr)) { // array.isArray(arr) 判断arr是否为数组
+                for (var i = 0; i < arr.length; i++) {
+                    res = res.concat(fun1(arr[i])); // 连接 新数组 和 旧数组中的第i个元素（数组）
+                }
+            } else {
+                res.push(arr); // push在数组最后插入元素
+            }
+            return res;
+        }
+
+        console.log(fun1(arr));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

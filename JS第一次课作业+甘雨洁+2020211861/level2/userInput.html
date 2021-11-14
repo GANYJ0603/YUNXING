@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户直接输入</title>
+    <script>
+        var str = prompt('请输入一个数字：');
+        do {
+            var num = Number(str);
+            if (isNaN(num) == true)
+                str = prompt('你未输入正确的数字，请重新输入：');
+        } while (isNaN(num) == true)
+        var consult = num * num;
+        alert('你输入的数字平方和为：' + consult);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

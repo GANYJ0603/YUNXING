@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reduce</title>
+    <script>
+        var arr = [1, 2, 3, 3, 4, 'a', 'a', 'b', 'c'];
+
+        function reduce(arr) {
+            var res = [];
+            for (var i = 0; i < arr.length; i++) {
+                for (var j = i + 1; j < arr.length; j++) {
+                    if (arr[i] == arr[j]) {
+                        for (var k = j; k < arr.length; k++) {
+                            arr[k] = arr[k + 1];
+                        }
+                        arr.length--;
+                    }
+                }
+            }
+            for (var m = 0; m < arr.length; m++) {
+                res[res.length] = arr[m];
+            }
+            return res;
+        }
+        console.log(reduce(arr));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
