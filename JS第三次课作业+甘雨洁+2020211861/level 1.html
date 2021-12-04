@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="color">点我可以改变颜色哦</button>
+    <script>
+        var color = document.querySelector('#color');
+        var body = document.body;
+        color.onclick = function() {
+            body.style.backgroundColor = 'skyblue';
+        }
+    </script>
+    <button class="fontSize">点我可以更改字体大小哦</button>
+    <p class="p">每天早起，好好学习，天天向上！</p>
+    <script>
+        var fontSize = document.querySelector('.fontSize');
+        var p = document.querySelector('.p');
+        fontSize.onclick = function() {
+            p.style.fontSize = 20 + 'px'
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="comment">
+        <p>评论区</p>
+        <textarea id="text" cols="30" rows="10"></textarea>
+        <button id="publish">发布</button>
+    </div>
+    <div id="leave">
+        <p>留言板</p>
+    </div>
+    <script>
+        var publish = document.getElementById('publish');
+        publish.onclick = () => {
+            var text = document.getElementById('text');
+            var para = document.createElement('p'); //创建新的一个p元素
+            var node = document.createTextNode(text.value); //创建文本节点，并将内容传给p(内容不能用innerHTML，它只对普通元素有效，表单元素记得用 value)
+            para.appendChild(node); //向p元素末尾追加文本节点
+            var btn = document.createElement('button'); //添加一个button元素标签
+            btn.innerHTML = '删除';
+            para.appendChild(btn); //将button从末尾添加
+            var leave = document.getElementById('leave');
+            leave.appendChild(para); //把新合成的p元素追加到留言板模块
+            btn.onclick = () => {
+                leave.removeChild(para); //可以将该节点从留言板删除
+            }
+        }
+    </script>
+</body>
+
+</html>
